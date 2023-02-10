@@ -52,7 +52,7 @@ let races = [
     {location: "Circuit of The Americas, USA"},
     {location: "Autódromo Hermanos Rodríguez, Mexico"},
     {location: "Autódromo José Carlos Pace, Brazil"},
-    {location: "Yasamsns Marina Circuit, Abu Dhabi"}
+    {location: "Yas Marina Circuit, Abu Dhabi"}
 ]
 app.get('/', (req, res) => {
     res.send('Formula 1 Facts')

@@ -54,18 +54,19 @@ let races = [
     {location: "Autódromo José Carlos Pace, Brazil"},
     {location: "Yas Marina Circuit, Abu Dhabi"}
 ]
+//GET http://localhost:3000
 app.get('/', (req, res) => {
     res.send('Formula 1 Facts')
 })
-
+//GET http://localhost:3000/constructors
 app.get('/constructors', (req, res) => {
     res.send(constructors)
 });
-
+//GET http"//localhost:3000/drivers
 app.get('/drivers', (req, res) => {
     res.send(drivers)
 });
-
+//GET http://localhost:3000/races
 app.get('/races', (req, res) => {
     res.send(races)
 });

@@ -4,7 +4,9 @@ const { v4: uuidv4 } = require('uuid')
 //List of todos
 let todos = [
     {name: "Walk dog", description: "He loves walking in the snow", complete: false, _id: uuidv4()},
-    {name: "Do homework", description: "It's due sunday", complete: false, _id:uuidv4()}
+    {name: "Do homework", description: "It's due sunday", complete: false, _id:uuidv4()},
+    {name: "Move houses", description: "Need to move to a bigger place", complete: false, _id:uuidv4()},
+    {name: "Buy dog food", description: "Dogs are out of food", complete: true, _id:uuidv4()}
 ]
 //GET  http://localhost:3000/todos
 todoRouter.get('/', (req, res) => {

@@ -1,0 +1,51 @@
+body{
+    background-color: aqua;
+}
+h1, p{
+   font-family:Georgia, 'Times New Roman', Times, serif
+}
+h1{
+    text-decoration: underline;
+}
+.addForm{
+    text-align: center;
+    font-size: xx-large;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: lightcoral;
+}
+.addForm:hover{
+    background-color: aqua;
+}
+.item-container{
+    display: flex;
+    flex-direction: column;
+    margin:10px ;
+    background-color: aqua;
+    text-align: center;
+}
+.item-container:hover{
+    background-color: lightcoral;
+}
+.listItems{
+    padding: 10px;
+    margin: 10px;
+    border: 5px dotted black;
+    border-radius: 50px;
+}
+.deleteBtn{
+    font-size: large;
+    margin:5px;
+    background-color: lightcoral;
+}
+.deleteBtn:hover{
+    background-color: aqua;
+}
+.editBtn{
+    font-size: large;
+    background-color: aqua;
+}
+.editBtn:hover{
+    background-color: lightcoral;
+}

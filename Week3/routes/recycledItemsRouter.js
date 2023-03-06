@@ -20,14 +20,16 @@ recycledItemsRouter.get('/:itemId', (req, res) => {
 
     res.send(singleRecItem)
 })
-//new item to POST http://localhost:3000/recycled-items
+
+// new item to POST http://localhost:3000/recycled-items
 recycledItemsRouter.post('/', (req, res) => {
     const newItem = req.body
     newItem._id = uuidv4()
     recycledItems.push(newItem)
-    res.send(`Added ${newItem.name} to database!`)
+    res.send(newItem)
 })
 
+// Delete Item from http://localhost:3000/recycled-items/_id
 recycledItemsRouter.delete('/:itemId', (req, res) => {
     const itemId = req.params.itemId
     const singleRecIndex = recycledItems.findIndex(item => item._id === itemId)
@@ -36,6 +38,7 @@ recycledItemsRouter.delete('/:itemId', (req, res) => {
     res.send('Resource successfully deleted!')
 })
 
+//PUT item from http://localhost:3000/recycled-items/_id
 recycledItemsRouter.put('/:itemId', (req, res) => {
     const itemId = req.params.itemId
     const singleRecIndex = recycledItems.findIndex(item => item._id === itemId)

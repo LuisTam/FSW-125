@@ -18,16 +18,17 @@ nonRecyclableItemsRouter.get('/:itemId', (req, res) => {
     const itemId = req.params.itemId
     const singleItem = nonRecyclabes.find(item => item._id === itemId)
 
-     res.send(singleItem)
+    res.send(singleItem)
  })
 // new item to POST http://localhost:3000/non-recyclables
 nonRecyclableItemsRouter.post('/', (req, res) => {
     const newNonRec = req.body
     newNonRec._id = uuidv4()
     nonRecyclabes.push(newNonRec)
-    res.send(`Added ${newNonRec.name} to database!`)
+    res.send(newNonRec)
 })
 
+// Delete item http://localhost:3000/non-recyclables/_id
 nonRecyclableItemsRouter.delete('/:itemId', (req, res) => {
     const itemId = req.params.itemId
     const itemIndex = nonRecyclabes.findIndex(item => item._id === itemId)
@@ -36,7 +37,7 @@ nonRecyclableItemsRouter.delete('/:itemId', (req, res) => {
     res.send('Resource successsfully deleted!')
 })
 
-
+// PUT item http://localhost:3000/non-recyclables/_id
 nonRecyclableItemsRouter.put('/:itemId', (req, res) => {
     const itemId = req.params.itemId
     const itemIndex = nonRecyclabes.findIndex(item => item._id === itemId)

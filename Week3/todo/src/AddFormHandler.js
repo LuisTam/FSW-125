@@ -3,12 +3,12 @@ import { useState } from "react";
 function AddFormHandler({submit, btnText, name, description, price, _id}){
     const initialInputs = {name: name || '' , description: description || '' , price: price || ''}
     const [inputs, setInputs] = useState(initialInputs)
-
+//Handles any changes done
     const handleChange = (e) => {
         const {name, value} = e.target;
         setInputs(prevInputs => ({...prevInputs, [name]: value }))
     }
-    
+//Handles a submit request.  
     const handleSubmit = (e) => {
         e.preventDefault();
         submit(inputs, _id);
@@ -16,7 +16,8 @@ function AddFormHandler({submit, btnText, name, description, price, _id}){
     }
 
     return(
-    <form onSubmit={handleSubmit}>
+//Creates form for submitting new things as well as changes
+<form onSubmit={handleSubmit}>
         <input
             type='text'
             name='name'
@@ -40,7 +41,7 @@ function AddFormHandler({submit, btnText, name, description, price, _id}){
         />
         <button>{btnText}</button>
 
-    </form>
+</form>
     )
 }
 

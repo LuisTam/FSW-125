@@ -4,7 +4,7 @@ const app = express()
 const todoRouter = require('./routes/todoRouter')
 
 const PORT = 3000
-//Turn JSON into readable JS
+//Middleware
 app.use(express.json())
 //http://localhost:3000/todos
 app.use('/todos', todoRouter)
